@@ -1,0 +1,11 @@
+.tileRoot {
+    background-color: #b7cced;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tile {
+    background-color: white;
+    
+}
