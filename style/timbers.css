@@ -1,0 +1,24 @@
+header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: white;
+    background-color: red;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 20%;
+   flex-direction: column;
+   
+}
+
+.imgRoot {
+    display: flex;
+    justify-content: center;
+    
+}

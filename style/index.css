@@ -10,7 +10,10 @@
 
 .tile {
     background-color: white;
+    cursor: pointer;
+    z-index: 10;
     max-width: 60%;
+    width: 60%;
     border-radius: 10px;
     overflow: hidden;
     filter: drop-shadow(10px 10px 3px #8c8673);
@@ -20,9 +23,11 @@
     max-width: inherit;
     width: 100%;
     
+    
 }
 
 .tileDesc{
     max-width: inherit;
     word-wrap: break-word;
+
 }
