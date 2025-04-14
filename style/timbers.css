@@ -10,7 +10,28 @@
 }
 
 .locationInfo {
-    padding: 100px;
+    padding-bottom: 50%;
+    padding-top: 10%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.locationInfo div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.locationInfo iframe {
+    height: 100%;
+    width: 150%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    
 }
 
 body{
@@ -19,7 +40,7 @@ body{
    align-items: center;
    margin-top: 10%;
    flex-direction: column;
-   
+   background-color: #b7cced;
 }
 
 .imgRoot {
