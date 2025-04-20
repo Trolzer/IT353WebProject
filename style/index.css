@@ -1,3 +1,12 @@
+:root{
+    --red: #CC0000;
+    --white: #FF0000;
+    --black: #000000;
+    --grey: #3b3b3b;
+    --yellow: #F6A917;
+    --blue: #56758f;
+}
+
 .tileRoot {
     background-color: #b7cced;
     display: flex;
