@@ -56,7 +56,10 @@ body{
 .imgRoot {
     display: flex;
     justify-content: center;
-    
+
 }
 
+.imgRoot img {
+    max-width: 50%;
+}
 
