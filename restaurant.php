@@ -34,7 +34,7 @@ $reviews = $stmt->fetchAll();
 </head>
 <body>
   <header>
-    <a class="headerLogo" href="index.php">Redbird Eats</a>
+  <div class="headerLogo" onclick="window.location='index.php'">Redbird Eats</div>
     <div style="position:absolute; top:10px; right:10px;">
       <?php if (!empty($_SESSION['user_id'])): ?>
         Hello, <?=htmlspecialchars($_SESSION['username'])?> |
@@ -48,14 +48,25 @@ $reviews = $stmt->fetchAll();
 
   <h1 class="resturantName"><?=htmlspecialchars($rest['name'])?></h1>
   <div class="imgRoot">
-    <img src="<?=htmlspecialchars($rest['image_path'])?>" class="slides">
+    <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    
+    <?php 
+        $files = scandir($rest['image_path']);
+        foreach ($files as $file) {
+          $filePath = $rest['image_path'] . '/' . $file;
+          if (is_file($filePath)){
+            echo "<img src='" . $rest['image_path'] . '/' . $file . "' class='slides'>";
+          }
+        }
+      ?>
+    <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
   </div>
 
   <div class="locationInfo">
     <?= $rest['map_embed'] ?>
   </div>
-
-  <section>
+  
+  <section class="reviews">
     <h2>Reviews</h2>
     <?php if ($reviews): ?>
       <?php foreach($reviews as $r): ?>
@@ -72,7 +83,7 @@ $reviews = $stmt->fetchAll();
   </section>
 
   <?php if (!empty($_SESSION['user_id'])): ?>
-    <section>
+    <section class="addReviews">
       <h2>Add Your Review</h2>
       <form method="POST" action="add_review.php">
         <input type="hidden" name="restaurant_id" value="<?=$id?>">
