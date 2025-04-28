@@ -20,8 +20,8 @@
 }
 
 .locationInfo {
-    padding-bottom: 50%;
-    padding-top: 10%;
+    /* padding-bottom: 50%; */
+    padding-top: 5%;
     position: relative;
     align-items: center;
     justify-content: center;
@@ -33,6 +33,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .locationInfo iframe {
@@ -48,7 +49,7 @@ body{
    display: flex;
    justify-content: center;
    align-items: center;
-   margin-top: 10%;
+   margin-top: 5%;
    flex-direction: column;
    background-color: #b7cced;
 }
@@ -59,4 +60,11 @@ body{
     
 }
 
+/* .imgRoot img {
+    max-width: 35%;
+} */
+
+.addReviews {
+    padding-bottom: 10%;
+}
 
