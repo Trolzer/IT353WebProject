@@ -1,5 +1,5 @@
 <?php
-// restaurant.php
+
 require 'config.php';
 
 $id = (int)($_GET['id'] ?? 0);
@@ -52,7 +52,7 @@ $reviews = $stmt->fetchAll();
   </div>
 
   <div class="locationInfo">
-    <?= $rest['map_embed'] /* stored iframe */ ?>
+    <?= $rest['map_embed'] ?>
   </div>
 
   <section>

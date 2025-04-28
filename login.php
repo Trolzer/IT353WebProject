@@ -1,5 +1,5 @@
 <?php
-// login.php
+
 require 'config.php';
 
 $errors = [];

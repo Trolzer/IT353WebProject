@@ -5,6 +5,7 @@ require 'config.php';
 $errors = [];
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
+    var_dump($_POST);
     $u = trim($_POST['username'] ?? '');
     $p = $_POST['password'] ?? '';
 
@@ -15,17 +16,21 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors[] = 'Password must be 6 or more characters.';
     }
 
-    if(!errors){
-        $stmt = $pdo->prepare('SELECT id FROM users WHERE username = ?');
-        $stmt->execute([$u]);
-        if($stmt->fetch()) {
+    if(!$errors){
+        try{
+            $stmt = $pdo->prepare('SELECT id FROM users WHERE username = ?');
+            $stmt->execute([$u]);
+            if($stmt->fetch()) {
             $errors[] = 'Username already taken.';
-        } else {
+            } else {
             $hash = password_hash($p, PASSWORD_DEFAULT);
             $stmt = $pdo->prepare('INSERT INTO users (username, password_hash) VALUES (?, ?)');
             $stmt->execute([$u, $hash]);
             header('Location: login.php');
             exit;
+            }
+        } catch (PDOException $ex) {
+            echo "<p style='color:red;'>SQL error: " . htmlspecialchars($ex->getMessage()) . "</p>";
         }
     }
 }
