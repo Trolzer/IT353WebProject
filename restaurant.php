@@ -61,11 +61,13 @@ $reviews = $stmt->fetchAll();
       ?>
     <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
   </div>
-
-  <div class="locationInfo">
-    <?= $rest['map_embed'] ?>
+  <div class = "Holder">
+    <div class="locationInfo">
+      <?= $rest['map_embed'] ?>
+    </div>
+    <div class = "Description">
+    </div>
   </div>
-  
   <section class="reviews">
     <h2>Reviews</h2>
     <?php if ($reviews): ?>
@@ -81,7 +83,6 @@ $reviews = $stmt->fetchAll();
       <p>No reviews yet.</p>
     <?php endif; ?>
   </section>
-
   <?php if (!empty($_SESSION['user_id'])): ?>
     <section class="addReviews">
       <h2>Add Your Review</h2>
@@ -103,7 +104,6 @@ $reviews = $stmt->fetchAll();
   <?php else: ?>
     <p><a href="login.php">Log in</a> to add a review.</p>
   <?php endif; ?>
-
-  <script src="js/slideShow.js"></script>
+<script src="js/slideShow.js"></script>
 </body>
 </html>

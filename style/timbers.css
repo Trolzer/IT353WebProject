@@ -68,3 +68,9 @@ body{
     padding-bottom: 10%;
 }
 
+.Holder {
+    display:flex;
+    border-color: #000000;
+    border-radius: 10px;
+    border-style: dashed;
+}
