@@ -30,12 +30,16 @@ $reviews = $stmt->fetchAll();
 <head>
   <meta charset="UTF-8">
   <title><?=htmlspecialchars($rest['name'])?></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style/timbers.css">
+  <link rel="stylesheet" href="style/global.css">
 </head>
 <body>
   <header>
-  <div class="headerLogo" onclick="window.location='index.php'">Redbird Eats</div>
-    <div style="position:absolute; top:10px; right:10px;">
+    <div class="headerLogo" onclick="window.location='index.php'">Redbird Eats</div>
+  </header>
+  <div class="userLinks">
       <?php if (!empty($_SESSION['user_id'])): ?>
         Hello, <?=htmlspecialchars($_SESSION['username'])?> |
         <a href="logout.php">Logout</a>
@@ -44,8 +48,6 @@ $reviews = $stmt->fetchAll();
         <a href="register.php">Sign up</a>
       <?php endif; ?>
     </div>
-  </header>
-
   <h1 class="resturantName"><?=htmlspecialchars($rest['name'])?></h1>
   <div class="imgRoot">
     <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>

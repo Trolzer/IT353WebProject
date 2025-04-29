@@ -38,7 +38,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html>
-<head><title>Register</title></head>
+<head>
+    <link rel="stylesheet" href="style/global.css">
+    <link rel="stylesheet" href="style/forms.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Register</title>
+</head>
 <body>
   <h1>Sign Up</h1>
   <?php foreach($errors as $e) echo "<p style='color:red;'>$e</p>"; ?>

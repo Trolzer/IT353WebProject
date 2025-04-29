@@ -2,7 +2,7 @@
 
 session_start();
 
-$DB_HOST = '';
+$DB_HOST = '127.0.0.1';
 $DB_NAME = 'redbird_eats';
 $DB_USER = 'root';
 $DB_PASS = '';
