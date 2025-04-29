@@ -1,24 +1,155 @@
-header {
-    position: absolute;
-    top: 0px;
-    left: 0px;
+:root{
+    --red: #CC0000;
+    --white: #FF0000;
+    --black: #000000;
+    --grey: #3b3b3b;
+    --yellow: #F6A917;
+    --blue: #56758f;
+}
+
+.headerLogo {
     color: white;
-    background-color: red;
-    font-size: 60px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;    
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+header {
+    align-self: stretch;        
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--red);
+    padding: 1rem 0;
+}
+
+.userLinks {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    text-align: right;
+  
+    color: white;
+    font-size: 0.9rem;
+  }
+  
+
+  .userLinks a {
+    color: white;
+    margin-left: 0.5rem;
+    text-decoration: none;
+  }
+  
+  .userLinks a:hover {
+  
+    color: var(--yellow);
+    text-decoration: underline;
+  }
+
+.locationInfo {
+
+    padding-top: 5%;
+    margin-left: 7%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+
+.star-rating {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.25rem;  
+  }
+  
+
+  .star {
+    font-size: 1rem;        
+    color: #ccc;
+    margin-right: 0.1rem;
+
+  }
+  
+
+  .star.filled {
+    color: var(--yellow);
+  }
+
+.locationInfo div {
+    display: flex;
+    width:fit-content;
+    padding: auto;
+}
+
+.locationInfo iframe {
+    height: 100%;
+    width: 150%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    
 }
 
 body{
    display: flex;
    justify-content: center;
    align-items: center;
-   margin-top: 20%;
+   margin-top: 5%;
    flex-direction: column;
-   
+   background-color: #dddddd;;
 }
 
 .imgRoot {
     display: flex;
     justify-content: center;
     
+}
+
+/* .imgRoot img {
+    max-width: 35%;
+} */
+
+.addReviews {
+    padding-bottom: 10%;
+}
+
+.Holder {
+    margin-top: 25px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    background-color: #3b3b3b;
+    border-color: #000000;
+    border-radius: 10px;
+    border-bottom-style: dashed;
+    border-right-style: inset;
+    border-left-style: inset;
+    border-top-style: inset;
+    width: 90%;
+}
+
+.Description {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--red);
+    width: 50%;
+    color: #dddddd;
+    font-size: larger;
+    margin-left: 10%;
+    border-color: #000000;
+    border-style: inset;
+    border-radius: 10px;
+    padding: 5px;
+    height: fit-content;
+}
+.reviews{
+    border-color: #000000;
+    border-style: inset;
+    border-radius: 10px;
+    width: 90%;
+    text-align: center;
 }

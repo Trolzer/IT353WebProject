@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/subway.css">
+</head>
+<header>
+    <div class="headerLogo" onclick="window.location='index.html'">Redbird Eats</div>
+</header>
+<body>
+    <div class="resturantName">Subway</div>
+    <div class="imgRoot">
+        <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <img src="images/subway.jpg"  class="slides">
+        <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+ 
+    </div>
+
+    <div class="locationInfo">
+        <div>Restaurant Location</div>
+        <select onchange="updateLocation()" name="subwayLocation" id="subwayLocation">
+            <option value='<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3033.140384093119!2d-89.00194402398404!3d40.51638807142372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880b7174f3000001%3A0x7a663b687bda1851!2sSubway!5e0!3m2!1sen!2sus!4v1745420415446!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'>Cardinal Court</option>
+            <option value='<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3033.3823357401566!2d-88.99031912398429!3d40.511039571424575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880b71064e8bfeb1%3A0x8f24e28be437596a!2sSubway!5e0!3m2!1sen!2sus!4v1745421646394!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'>Manchester Hall</option>
+            <option value='<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3033.5032677271793!2d-88.99013922398446!3d40.50836607142509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880b71078837818d%3A0xac97bc48cbf2e2bb!2sSubway!5e0!3m2!1sen!2sus!4v1745421714568!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'>Watterson Towers</option>
+            <option value='<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1072.4443709673712!2d-89.00168780655854!3d40.512192454265715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880b7176783777f9%3A0x745a09882759544d!2sSubway!5e0!3m2!1sen!2sus!4v1745421926985!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'>Wilkins Hall</option>
+        </select>
+        <div id="locationEmbed" class="locationInfo">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3033.140384093119!2d-89.00194402398404!3d40.51638807142372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880b7174f3000001%3A0x7a663b687bda1851!2sSubway!5e0!3m2!1sen!2sus!4v1745420415446!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <script src="js/slideShow.js"></script>
+    <script src="js/subway.js"></script>
+</body>
+</html>
