@@ -12,7 +12,7 @@
     top: 0px;
     left: 0px;
     color: white;
-    background-color: red;
+    background-color: var(--red);
     font-size: 60px;
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
@@ -51,7 +51,7 @@ body{
    align-items: center;
    margin-top: 5%;
    flex-direction: column;
-   background-color: #b7cced;
+   background-color: #dddddd;;
 }
 
 .imgRoot {

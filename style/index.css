@@ -1,6 +1,5 @@
 :root{
     --red: #CC0000;
-    --white: #FF0000;
     --black: #000000;
     --grey: #3b3b3b;
     --yellow: #F6A917;
@@ -8,7 +7,7 @@
 }
 
 .tileRoot {
-    background-color: #b7cced;
+    background-color: #dddddd;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,7 +21,7 @@
     top: 0px;
     left: 0px;
     color: white;
-    background-color: red;
+    background-color: var(--red);
     font-size: 60px;
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
@@ -30,11 +29,12 @@
 }
 
 .tile {
-    background-color: white;
+    background-color: var(--red);
+    color: white;
     cursor: pointer;
     z-index: 10;
-    max-width: 30%;
-    width: 30%;
+    max-width: 50%;
+    width: 50%;
     border-radius: 10px;
     overflow: hidden;
     filter: drop-shadow(10px 10px 3px #8c8673);
@@ -50,5 +50,5 @@
 .tileDesc{
     max-width: inherit;
     word-wrap: break-word;
-
+    padding: 15px;
 }
