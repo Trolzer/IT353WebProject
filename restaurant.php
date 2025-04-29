@@ -66,6 +66,7 @@ $reviews = $stmt->fetchAll();
       <?= $rest['map_embed'] ?>
     </div>
     <div class = "Description">
+      <p><?=htmlspecialchars($rest['long_description'])?></p>
     </div>
   </div>
   <section class="reviews">

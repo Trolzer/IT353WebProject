@@ -19,21 +19,22 @@
     border-bottom-right-radius: 10px;
 }
 
+
 .locationInfo {
     /* padding-bottom: 50%; */
     padding-top: 5%;
-    position: relative;
+    margin-left: 7%;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
+    margin-bottom: 5px;
 }
 
 .locationInfo div {
     display: flex;
-    justify-content: center;
-    align-items: center;
-
+    width:fit-content;
+    padding: auto;
 }
 
 .locationInfo iframe {
@@ -69,8 +70,40 @@ body{
 }
 
 .Holder {
+    margin-top: 25px;
     display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    background-color: #3b3b3b;
     border-color: #000000;
     border-radius: 10px;
-    border-style: dashed;
+    border-bottom-style: dashed;
+    border-right-style: inset;
+    border-left-style: inset;
+    border-top-style: inset;
+    width: 90%;
+}
+
+.Description {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--red);
+    width: 50%;
+    color: #dddddd;
+    font-size: larger;
+    margin-left: 10%;
+    border-color: #000000;
+    border-style: inset;
+    border-radius: 10px;
+    padding: 5px;
+    height: fit-content;
+}
+.reviews{
+    border-color: #000000;
+    border-style: inset;
+    border-radius: 10px;
+    width: 90%;
+    text-align: center;
 }
